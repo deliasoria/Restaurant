@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="#E6B7D3"
+    >
+
+    <TextView
+        android:id="@+id/TV_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MENUS RESTAURANTE CEROCA"
+        android:textAlignment="center"
+        android:textColor="#0000FF"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+    <LinearLayout
+        android:id="@+id/LL_menus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/TV_Titulo"
+        android:background="#B5B2B2"
+        >
+
+        <TextView
+            android:id="@+id/TV_menu1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="#9FF0F4"
+            android:gravity="center"
+            android:text="MENU 1: \n\n* Crema de \ncalabacín\n\n* Sepia a la \nplancha con \ncuscús hervido \n\n* Yogurt casero"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/TV_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="#44B2EA"
+            android:gravity="center"
+            android:text="MENU 2: \n\n* Ensalada de \n pasta \n\n* Pechuga de \npavo con \npatatas \n\n* Macedonia"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/TV_menu3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="#9FF0F4"
+            android:gravity="center"
+            android:text="MENU 3: \n\n* Col de \n bruselas con \nsetas \n\n* Heura a \n la plancha \n\n * Pastel de \nqueso"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_botons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/LL_menus">
+
+        <Button
+            android:id="@+id/BTN_Menu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu 1"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/BTN_Menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu 2"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/BTN_Menu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu 3"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

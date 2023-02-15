@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:padding="20dp"
+    android:background="#E6B7D3">
+
+    <TextView
+        android:id="@+id/TV_MenuReservado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MENU RESERVADO"
+        android:textAlignment="center"
+        android:textColor="#23E037"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+    <LinearLayout
+        android:id="@+id/LL_MenuElegido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/TV_MenuReservado">
+
+        <FrameLayout
+            android:id="@+id/FL_InformacionReserva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B5B2B2"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL_BotonesCancelarYVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/LL_MenuElegido">
+
+        <Button
+            android:id="@+id/BTN_Cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="#E81414"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/BTN_Volver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:backgroundTint="#E8DB14"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
