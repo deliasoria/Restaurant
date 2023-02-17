@@ -1,6 +1,7 @@
 package com.example.restaurant;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mBTNmenu1, mBTNmenu2, mBTNmenu3;
+    private MenuViewModel mMenuViewModel;
 
 
     @Override
@@ -20,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         mBTNmenu1=findViewById(R.id.BTN_Menu1);
         mBTNmenu2=findViewById(R.id.BTN_Menu2);
         mBTNmenu3=findViewById(R.id.BTN_Menu3);
+
+        //Inicialitzem la clase de Model View
+        mMenuViewModel = new ViewModelProvider(this).get(MenuViewModel.class);
 
         mBTNmenu1.setOnClickListener(new View.OnClickListener() {
             @Override

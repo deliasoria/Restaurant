@@ -24,7 +24,8 @@ public class MainActivity2 extends AppCompatActivity {
         mBTNCancelar=findViewById(R.id.BTN_Cancelar);
         mTVMenuReservado=findViewById(R.id.TV_MenuReservado);
 
-        //mTVMenuReservado.setText("menu");
+        String numMenu = getIntent().getStringExtra("menu");
+        mTVMenuReservado.setText(numMenu + " RESERVADO ");
 
 
         String numeromenu = getIntent().getStringExtra("menu");
