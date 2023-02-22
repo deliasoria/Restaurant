@@ -56,6 +56,33 @@
             android:backgroundTint="#E8DB14"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/BTN_Confirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"
+            android:backgroundTint="#00CF3C"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/LL_BotonesCancelarYVolver">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Me ha gustado el menu"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No me ha gustado el menu"/>
+
+
     </LinearLayout>
 
 </RelativeLayout>

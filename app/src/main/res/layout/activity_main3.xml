@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3"
+    android:padding="20dp"
+    android:background="#E6B7D3"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/TV_SalidaApp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LA SALIDA SE HA PROCESADO CON EXITO!"
+        android:textAlignment="center"
+        android:textColor="#CF4200"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/TV_SalidaApp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HASTA OTRA!"
+        android:textAlignment="center"
+        android:textColor="#CF4200"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_below="@id/TV_SalidaApp1"
+        />
+</RelativeLayout>
