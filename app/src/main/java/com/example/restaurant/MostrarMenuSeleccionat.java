@@ -3,62 +3,48 @@ package com.example.restaurant;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MostrarMenuSeleccionat#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MostrarMenuSeleccionat extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    //Declaramos la clase de Model View
+    private MenuViewModel mMenuModelView;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    // Declaramos la clase de Fragment
+    private TextView mFragmentMenus;
 
     public MostrarMenuSeleccionat() {
         // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MostrarMenuSeleccionat.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MostrarMenuSeleccionat newInstance(String param1, String param2) {
-        MostrarMenuSeleccionat fragment = new MostrarMenuSeleccionat();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    //Dejamos solo el metodo de OnCreateView
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mostrar_menu_seleccionat, container, false);
+
+        //Declarem el que hi havia al return amb una variable per a poder ficar accions enter mig
+        View v = inflater.inflate(R.layout.fragment_mostrar_menu_seleccionat, container, false);
+
+        //Instanciem el fragment
+        mFragmentMenus = v.findViewById(R.id.TV_FragmentMenu);
+
+        //Inicializamos el model view
+        mMenuModelView = new ViewModelProvider(this).get(MenuViewModel.class);
+
+        //Cogemos el get del VM para ponerlo en el fragment y que escriba el seleccionado en cada momento
+        mMenuModelView.getMenuseleccionado().observe(getViewLifecycleOwner(), itemObservat -> {
+            mFragmentMenus.setText(itemObservat);
+        });
+
+        //Ponemos en return la variable v.
+        return v;
     }
 }
