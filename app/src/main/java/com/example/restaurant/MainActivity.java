@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private Button mBTNmenu1, mBTNmenu2, mBTNmenu3;
     private MenuViewModel mMenuViewModel;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
